@@ -2,15 +2,15 @@
   Polyfill Object.create
 */
 
-if (typeof Object.create === 'undefined') {
-  Object.create = function (object) {
+if (typeof Object.create !== 'function') {
+  Object.create = function (o) {
     if (arguments.length !== 1) {
       throw new Error('Object.crete polyfill only accept one parameter');
     }
 
-    function fn() {}
-    fn.prototype = object;
-    fn.prototype.constructor = object.constructor;
-    return new fn;
-  }
-};
+    function F() {}
+    F.prototype = o;
+
+    return new F();
+  };
+}
