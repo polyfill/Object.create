@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+  </head>
+  <body>
+    <script src="../build/build.js"></script>
+    <script>
+      require('Object.create')
+
+      var test = require('simple-test');
+
+      test('Object.create', function () {
+        var proto = {hi: 'ho'};
+        var obj = Object.create(proto);
+
+        test.eq(obj.hi, 'ho');
+      });
+      </script>
+  </body>
+</html>

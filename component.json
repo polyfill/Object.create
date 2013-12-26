@@ -1,0 +1,17 @@
+{
+  "name": "Object.create",
+  "repo": "polyfill/Object.create",
+  "description": "Polyfill for Object.create",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {
+    "shallker/simple-test": "*"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "Object.create.js"
+  ]
+}
